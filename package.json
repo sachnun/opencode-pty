@@ -1,0 +1,49 @@
+{
+  "name": "opencode-pty",
+  "module": "index.ts",
+  "version": "0.0.0",
+  "description": "OpenCode plugin for interactive PTY management - run background processes, send input, read output with regex filtering",
+  "author": "shekohex",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "pty",
+    "pseudo-terminal",
+    "terminal",
+    "background-process",
+    "interactive",
+    "cli",
+    "shell",
+    "dev-server",
+    "bun"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shekohex/opencode-pty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shekohex/opencode-pty/issues"
+  },
+  "homepage": "https://github.com/shekohex/opencode-pty#readme",
+  "files": [
+    "index.ts",
+    "src"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.0.146",
+    "@opencode-ai/sdk": "^1.0.146",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bun-pty": "^0.4.2"
+  }
+}
