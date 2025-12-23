@@ -1,4 +1,4 @@
-import { spawn, type IPty } from "bun-pty";
+import { spawn, type IPty } from "node-pty";
 import { RingBuffer } from "./buffer.ts";
 import type { PTYSession, PTYSessionInfo, SpawnOptions, ReadResult, SearchResult } from "./types.ts";
 import { createLogger } from "../logger.ts";
