@@ -52,6 +52,12 @@ jobs:
             echo "tag_exists=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Push tag to remote
+        if: steps.determine.outputs.changed == 'true' && steps.determine.outputs.tag_exists == 'false'
+        run: |
+          git tag v${{ steps.determine.outputs.current_version }}
+          git push origin v${{ steps.determine.outputs.current_version }}
+
       - name: Install dependencies
         if: steps.determine.outputs.changed == 'true' && steps.determine.outputs.tag_exists == 'false'
         run: |
