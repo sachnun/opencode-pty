@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Determine release state
         id: determine
@@ -101,7 +102,7 @@ jobs:
             printf '%s\n' '```json'
             printf '%s\n' '{'
             printf '%s\n' '  "$schema": "https://opencode.ai/config.json",'
-            printf '%s\n' '  "plugin": ["opencode-pty"]'
+            printf '%s\n' '  "plugin": ["@sachnun/opencode-pty"]'
             printf '%s\n' '}'
             printf '%s\n' '```'
             echo ""
@@ -110,7 +111,7 @@ jobs:
             echo "To get the latest version:"
             echo ""
             printf '%s\n' '```bash'
-            printf '%s\n' 'rm -rf ~/.cache/opencode/node_modules/opencode-pty'
+            printf '%s\n' 'rm -rf ~/.cache/opencode/node_modules/@sachnun/opencode-pty'
             printf '%s\n' 'opencode'
             printf '%s\n' '```'
           } >"$BODY_FILE"
