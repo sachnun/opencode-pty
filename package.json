@@ -44,6 +44,6 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "bun-pty": "^0.4.2"
+    "node-pty": "^1.0.0"
   }
 }

@@ -1,4 +1,5 @@
-import { spawn, type IPty } from "bun-pty";
+import * as pty from "node-pty";
+import type { IPty } from "node-pty";
 import { RingBuffer } from "./buffer.ts";
 import type { PTYSession, PTYSessionInfo, SpawnOptions, ReadResult, SearchResult } from "./types.ts";
 import { createLogger } from "../logger.ts";
@@ -24,7 +25,7 @@ class PTYManager {
 
     log.info("spawning pty", { id, command: opts.command, args, workdir });
 
-    const ptyProcess: IPty = spawn(opts.command, args, {
+    const ptyProcess: IPty = pty.spawn(opts.command, args, {
       name: "xterm-256color",
       cols: 120,
       rows: 40,
