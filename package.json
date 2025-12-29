@@ -1,9 +1,9 @@
 {
-  "name": "opencode-pty",
+  "name": "@sachnun/opencode-pty",
   "module": "index.ts",
   "version": "0.1.1",
   "description": "OpenCode plugin for interactive PTY management - run background processes, send input, read output with regex filtering",
-  "author": "shekohex",
+  "author": "sachnun",
   "keywords": [
     "opencode",
     "opencode-plugin",
@@ -19,12 +19,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/shekohex/opencode-pty.git"
+    "url": "https://github.com/sachnun/opencode-pty.git"
   },
   "bugs": {
-    "url": "https://github.com/shekohex/opencode-pty/issues"
+    "url": "https://github.com/sachnun/opencode-pty/issues"
   },
-  "homepage": "https://github.com/shekohex/opencode-pty#readme",
+  "homepage": "https://github.com/sachnun/opencode-pty#readme",
   "files": [
     "index.ts",
     "src"
