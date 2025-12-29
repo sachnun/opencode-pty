@@ -31,7 +31,7 @@ Add the plugin to your [OpenCode config](https://opencode.ai/docs/config/):
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["opencode-pty"]
+  "plugin": ["@sachnun/opencode-pty"]
 }
 ```
 
@@ -45,7 +45,7 @@ That's it. OpenCode will automatically install the plugin on next run.
 To get the latest version, clear the cached plugin and let OpenCode reinstall it:
 
 ```bash
-rm -rf ~/.cache/opencode/node_modules/opencode-pty
+rm -rf ~/.cache/opencode/node_modules/@sachnun/opencode-pty
 opencode
 ```
 
@@ -147,7 +147,7 @@ This plugin respects OpenCode's [permission settings](https://opencode.ai/docs/p
 
 ## How It Works
 
-1. **Spawn**: Creates a PTY using [bun-pty](https://github.com/nicksrandall/bun-pty), runs command in background
+1. **Spawn**: Creates a PTY using [node-pty](https://github.com/microsoft/node-pty), runs command in background
 2. **Buffer**: Output is captured into a rolling line buffer (ring buffer)
 3. **Read**: Agent can read buffer anytime with offset/limit pagination
 4. **Filter**: Optional regex pattern filters lines before pagination
@@ -172,7 +172,7 @@ Use `pty_kill` with `cleanup=true` to remove completely.
 ## Local Development
 
 ```bash
-git clone https://github.com/shekohex/opencode-pty.git
+git clone https://github.com/sachnun/opencode-pty.git
 cd opencode-pty
 bun install
 bun run tsc --noEmit  # Type check
@@ -198,4 +198,4 @@ Contributions are welcome! Please open an issue or submit a PR.
 ## Credits
 
 - [OpenCode](https://opencode.ai) - The AI coding assistant this plugin extends
-- [bun-pty](https://github.com/nicksrandall/bun-pty) - Cross-platform PTY for Bun
+- [node-pty](https://github.com/microsoft/node-pty) - Fork pseudoterminals in Node.JS
